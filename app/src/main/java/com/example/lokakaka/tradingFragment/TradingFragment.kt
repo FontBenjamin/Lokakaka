@@ -36,6 +36,10 @@ class TradingFragment: Fragment() {
                 return true
             }
         }
+        webView.clearCache(true)
+        webView.clearHistory()
+        webView.settings.javaScriptEnabled = true
+        webView.settings.javaScriptCanOpenWindowsAutomatically = true
         webView.loadUrl(getString(R.string.trading_calculator_url))
     }
 
