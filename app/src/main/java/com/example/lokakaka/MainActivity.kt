@@ -6,40 +6,42 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import android.widget.RelativeLayout
+import android.view.Window
 import android.widget.TextView
-import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import com.example.lokakaka.chatFragment.ChatFragment
 import com.example.lokakaka.encyclopediaFragment.EncyclopediaFragment
 import com.example.lokakaka.tradingFragment.TradingFragment
 import com.example.lokakaka.welcomeFragment.WelcomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import org.w3c.dom.Text
 
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var toolbar: ActionBar
+    lateinit var toolbar: Toolbar
+    lateinit var bottomNavigation: BottomNavigationView
+    lateinit var toolbarTitle: TextView
+
     var titleTick: Boolean = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        toolbar = supportActionBar!!
-
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigationView)
+        toolbar = findViewById(R.id.toolbar)
+        toolbarTitle = findViewById(R.id.titleTextView)
+        bottomNavigation = findViewById(R.id.bottomNavigationView)
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         // we open the welcome fragment at the start of the app
         openFragment(WelcomeFragment.newInstance())
 
         // we change the design of the title bar
-        toolbar.setHomeAsUpIndicator(R.drawable.ic_action_iconapp)
-        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
         animateActionBar()
     }
 
@@ -53,10 +55,10 @@ class MainActivity : AppCompatActivity() {
             override fun run() {
                 // do my thing
                 if (titleTick) {
-                    toolbar.title = getString(R.string.title)
+                    toolbarTitle.text = getString(R.string.title)
                     titleTick = false
                 } else {
-                    toolbar.title = getString(R.string.title_full)
+                    toolbarTitle.text  = getString(R.string.title_full)
                     titleTick = true
                 }
                 mainHandler.postDelayed(this, 750)

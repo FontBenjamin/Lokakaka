@@ -1,5 +1,6 @@
 package com.example.lokakaka.tradingFragment
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -39,6 +40,7 @@ class TradingFragment: Fragment() {
         webView.clearCache(true)
         webView.clearHistory()
         webView.settings.javaScriptEnabled = true
+        webView.setBackgroundColor(Color.TRANSPARENT)
         webView.settings.javaScriptCanOpenWindowsAutomatically = true
         webView.loadUrl(getString(R.string.trading_calculator_url))
     }
