@@ -1,16 +1,24 @@
 package com.example.lokakaka
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Activity
+import android.graphics.Typeface
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
+import android.widget.RelativeLayout
+import android.widget.TextView
+import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.lokakaka.chatFragment.ChatFragment
 import com.example.lokakaka.encyclopediaFragment.EncyclopediaFragment
 import com.example.lokakaka.tradingFragment.TradingFragment
 import com.example.lokakaka.welcomeFragment.WelcomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import org.w3c.dom.Text
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,10 +38,13 @@ class MainActivity : AppCompatActivity() {
         openFragment(WelcomeFragment.newInstance())
 
         // we change the design of the title bar
-        toolbar.title = getString(R.string.title)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_action_iconapp)
+        toolbar.setHomeAsUpIndicator(R.drawable.ic_action_iconapp)
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
         animateActionBar()
+    }
+
+    fun applyFont(tv: TextView, context: Activity) {
+        tv.typeface = Typeface.createFromAsset(context.assets, "fonts/customFont")
     }
 
     private fun animateActionBar() {
