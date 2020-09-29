@@ -24,6 +24,10 @@ class MainActivity : AppCompatActivity() {
 
         // we open the welcome fragment at the start of the app
         openFragment(WelcomeFragment.newInstance())
+
+        // we change the design of the title bar
+        getSupportActionBar()?.setHomeAsUpIndicator(R.drawable.ic_action_iconapp);// set drawable icon
+        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
     }
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
