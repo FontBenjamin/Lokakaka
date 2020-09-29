@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lokakaka</string>
+    <string name="welcome">Bienvenu</string>
+    <string name="menu_welcome">Bienvenue</string>
+    <string name="menu_encyclopedia">Marchandises</string>
+    <string name="menu_trading">Routes</string>
+    <string name="menu_chat">Discord</string>
+</resources>
