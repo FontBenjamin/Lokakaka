@@ -7,7 +7,7 @@
 
     <item
         android:id="@+id/navigation_encyclopedia"
-        android:icon="@drawable/ic_action_box"
+        android:icon="@drawable/ic_action_treasurechest"
         android:title="@string/menu_encyclopedia"/>
 
     <item
