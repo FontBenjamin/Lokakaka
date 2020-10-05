@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.lokakaka.R
+import kotlinx.android.synthetic.main.fragment_encyclopedia.*
 
 class CategoryFragment: Fragment() {
 
@@ -71,4 +72,5 @@ class CategoryFragment: Fragment() {
             }
         }
     }
+
 }

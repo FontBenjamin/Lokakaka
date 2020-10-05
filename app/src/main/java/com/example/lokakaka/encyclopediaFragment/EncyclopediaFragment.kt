@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.lokakaka.R
+import kotlinx.android.synthetic.main.fragment_encyclopedia.*
 
 
 class EncyclopediaFragment: Fragment() {
@@ -37,17 +39,23 @@ class EncyclopediaFragment: Fragment() {
         piracyButton = getView()?.findViewById(R.id.buttonPiracy)!!
         racingButton = getView()?.findViewById(R.id.buttonRacing)!!
 
-        var buttonClickListener: View.OnClickListener = View.OnClickListener {
+        smugglingButton.visibility = View.INVISIBLE
+        (smugglingButton.parent as ConstraintLayout).visibility = View.INVISIBLE
+        cleaningButton.visibility = View.INVISIBLE
+        (cleaningButton.parent as ConstraintLayout).visibility = View.INVISIBLE
+        hackingButton.visibility = View.INVISIBLE
+        (hackingButton.parent as ConstraintLayout).visibility = View.INVISIBLE
+        mercenaryButton.visibility = View.INVISIBLE
+        (mercenaryButton.parent as ConstraintLayout).visibility = View.INVISIBLE
+        datarunningButton.visibility = View.INVISIBLE
+        (datarunningButton.parent as ConstraintLayout).visibility = View.INVISIBLE
+        piracyButton.visibility = View.INVISIBLE
+        (piracyButton.parent as ConstraintLayout).visibility = View.INVISIBLE
+        racingButton.visibility = View.INVISIBLE
+        (racingButton.parent as ConstraintLayout).visibility = View.INVISIBLE
 
-
-        }
         val ft: FragmentTransaction = fragmentManager!!.beginTransaction()
         var fragment: CategoryFragment = CategoryFragment()
-
-
-
-
-
 
         smugglingButton.setOnClickListener({
             fragment.category = Categories.SMUGGLING
@@ -84,6 +92,26 @@ class EncyclopediaFragment: Fragment() {
             ft.replace(this.id, fragment, "RacingFragment")
             ft.commit()
         })
+
+        // we launch the animation
+        animateButtons()
+    }
+
+    private fun animateButtons() {
+        smugglingButton.getHandler().postDelayed(Runnable { smugglingButton.setVisibility(View.VISIBLE)
+            (smugglingButton.parent as ConstraintLayout).visibility = View.VISIBLE },100)
+        cleaningButton.getHandler().postDelayed(Runnable { cleaningButton.setVisibility(View.VISIBLE)
+            (cleaningButton.parent as ConstraintLayout).visibility = View.VISIBLE},200)
+        hackingButton.getHandler().postDelayed(Runnable { hackingButton.setVisibility(View.VISIBLE)
+            (hackingButton.parent as ConstraintLayout).visibility = View.VISIBLE},300)
+        mercenaryButton.getHandler().postDelayed(Runnable { mercenaryButton.setVisibility(View.VISIBLE)
+            (mercenaryButton.parent as ConstraintLayout).visibility = View.VISIBLE},400)
+        datarunningButton.getHandler().postDelayed(Runnable { datarunningButton.setVisibility(View.VISIBLE)
+            (datarunningButton.parent as ConstraintLayout).visibility = View.VISIBLE},500)
+        piracyButton.getHandler().postDelayed(Runnable { piracyButton.setVisibility(View.VISIBLE)
+            (piracyButton.parent as ConstraintLayout).visibility = View.VISIBLE},600)
+        racingButton.getHandler().postDelayed(Runnable { racingButton.setVisibility(View.VISIBLE)
+            (racingButton.parent as ConstraintLayout).visibility = View.VISIBLE},700)
     }
 
 }
