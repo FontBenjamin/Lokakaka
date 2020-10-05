@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="750dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Drugs are generally referred to as substances that cause physical and psychological changes due to an (acute) intoxication of the body. Within Star Citizen, drugs are classified as 'controlled substances' and are distinguished into three classes: A, B, and C. Within the United Empire of Earth only the trafficking and possession of Class A controlled substances are regarded as a crime, leaving room for local jurisdictions, which can vary from planet to planet.  For example, Maze is classified by Crusader and Hurston authorities as a class B substance. Since the possession of any Class B drug is considered a misdemeanor by Crusader authorities, offenders have to pay a fine, while on Hurston, Class B drugs are not subject to prosecution.  Drugs have been slated to be tied mostly to the criminal gameplay aspect of Star Citizen. While there are legal drugs, players are granted missions and trading opportunities geared around illegal drug sales and trafficking.\n\nLegal Drugs Altruciatoxin WikimediaUI-Article-ltr.svg Main article: Altruciatoxin  A drug made of processed pollen from the Revenant Tree (altrucia lacus). Known for its sedative effects (muscle relaxation, sensory enhancement, lethargy).[1] While the trafficking of the substance on Crusader is considered a misdemeanor, possession is legal everywhere. Stims Legal everywhere: coffee.  Legal drugs made for inhalation (smoking, vaping), usually consisting of tobacco, caffeine, sujin roots and 'mood-enhancers'.[2] Illegal Drugs SLAM WikimediaUI-Article-ltr.svg Main article: SLAM  Pain and fear inhibitor. Used first as a 'steroid' by athletes. Vials with the substance are cracked, ingested and inhaled as a gas. Dependent users develop involuntary muscle twitches, called 'the shakes'. These twitches resulting primarily from drug use and are not triggered by withdrawal effects.[2] SLAM is considered a class A controlled substance. Trafficking and possession are heavily penalized in the UEE. WiDoW WikimediaUI-Article-ltr.svg Main article: WiDoW  Opiate which appears 'ink-black' and is exclusively injected as a liquid. frequent use stains the blood vessels black, causing their users to show a typical discoloration of their veins, resulting in a 'web-like pattern' on their skin. The substance is also considered a class A substance everywhere in the UEE. Wallace Klim. A WiDoW user. Neon WikimediaUI-Article-ltr.svg Main article: Neon  A 'club drug similar to ecstasy', which affects the nervous system and acts slightly hallucinogenic.[2] The possession of Neon is legal everywhere, while trafficking is considered a felony on Crusader and Hurston. Maze WikimediaUI-Article-ltr.svg Main article: Maze      &quot;(...) a nasty substance that puts the body to sleep but sends the head to the stars. Reports indicate that Maze use and trafficking has been on the rise throughout the Empire.&quot;     Garret Colliga [3]  Believed to be of Xi'an origin, the narcotic-acting tranquilizer and hallucinogen with a bark-shaped appearance are sold on the street as 'Maze'. While maze is usually ingested, due to the high potency of the substance, an injection can kill a user immediately. Since it affects the user's consciousness, leading to a near-comatose condition while the users experience hallucinations, some religions have implemented the use of the drug. The state can become chronic ('getting disconnected') and affected persons are locked-in 'until their brain decays.' [2]  Maze is a class B substance on Crusader and Hurston. Trafficking is considered a felony, while possession is considered a misdemeanor. E'tam WikimediaUI-Article-ltr.svg Main article: E'tam  Xi'an herb (also known as Flow, Blinder, Ticktock) which is used as a neuroenhancer by students and workers. Due to its effects (hyper-awareness and hyper-focus) it poses the danger of self-neglect in frequent users. Possession is legal everywhere in the UEE. Jurisdiction WikimediaUI-Article-ltr.svg Main article: Jurisdictions  The possession and trafficking of drugs are regulated by different authorities. Within the UEE, systemwide law enforcement is enforced by the local authorities, which can also include non-governmental entities, like the Hurston, ArcCorp and Crusader company in the Stanton System. Outside of the UEE controlled realm such entities, like the fringe group of the People's Alliance often have widely divergent legal opinions on the matter. Drug use and trafficking seem to be not regulated on Levski. 	UEE 	Crusader 	Hurston 	People's Alliance 	microTech 	Banu 	Xi'an 	Trafficking legal ? 	Possession legal ? Legal force 	All UEE systems 	Planet Crusader 	Planet Hurston 	(Levski) 	Planet microTech 	Protectorate 	Xi'an Empire 	UEE Drug 	Classification by Entity 				 Maze 	Not listed 	Class B 	Class B 	Not listed 	Class C 	? 	? 	No 	No SLAM 	Class A 	Class A 	Class A 	Not listed 	Class A 	? 	? 	No 	No WiDoW 	Class A 	Class A 	Class A 	Not listed 	Class A 	? 	? 	No 	No Neon 	Not listed 	Class C 	Class B 	Not listed 	Class C 	? 	? 	No 	No Altruciatoxin 	Not listed 	Class C 	Class B 	Not listed 	Class C 	? 	? 	Yes,  Crusader: No 	Yes E'tam 	Not listed 	Class C 	Class C 	Not listed 	Not listed 	? 	? 	No 	Yes Fines 	UEE 	Crusader 	Hurston 	People's Alliance 	microTech 		 	Trafficking 	Possession 	Trafficking 	Possession 	Trafficking 	Possession 	Trafficking 	Possession 	Trafficking 	Possession 	 Class A 	10'000 	4'000 	10'000 	4'000 	10'000 	4'000 5,000 	2,000 	- [4] 	- [4] 	 Class B 	- 	- 	8'750 	2'500 	8'750 	- 	- 	- 	4,375 	1,250 	 Class C 	- 	- 	6'250 	2'000 	6'250 	- 	- 	- 	- 	- "
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/smuggling_screenshot_foreground"
+                tools:srcCompat="@mipmap/smuggling_screenshot_foreground" />
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/border"
+                android:padding="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView2"
+                app:srcCompat="@drawable/ic_action_back"
+                app:tint="@color/colorAccent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
