@@ -1,12 +1,15 @@
 package com.example.lokakaka.tradingFragment
 
 import android.graphics.Color
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.ProgressBar
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.lokakaka.R
 
