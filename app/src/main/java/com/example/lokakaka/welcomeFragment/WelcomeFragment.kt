@@ -24,7 +24,6 @@ class WelcomeFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         welcomeIndicator = getView()?.findViewById(R.id.indicatorWelcome)!!
         welcomeIndicator.bringToFront()
-
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
