@@ -15,6 +15,7 @@ class WelcomeFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
         inflater.inflate(R.layout.fragment_welcome, container, false)
 
+
     companion object {
         fun newInstance(): WelcomeFragment = WelcomeFragment()
     }
@@ -22,6 +23,12 @@ class WelcomeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         welcomeIndicator = getView()?.findViewById(R.id.indicatorWelcome)!!
+        welcomeIndicator.bringToFront()
+
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         welcomeIndicator.visibility = View.GONE
     }
 

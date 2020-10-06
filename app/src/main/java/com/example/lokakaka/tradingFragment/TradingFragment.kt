@@ -1,21 +1,20 @@
 package com.example.lokakaka.tradingFragment
 
 import android.graphics.Color
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.ProgressBar
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.lokakaka.R
+import com.wang.avi.AVLoadingIndicatorView
 
 class TradingFragment: Fragment() {
 
     private lateinit var webView: WebView
+    lateinit var tradingIndicator: AVLoadingIndicatorView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,6 +30,8 @@ class TradingFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        tradingIndicator = getView()?.findViewById(R.id.indicatorTrading)!!
+        tradingIndicator.bringToFront()
         webView = getView()?.findViewById(R.id.tradingWebView)!!
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
@@ -39,6 +40,10 @@ class TradingFragment: Fragment() {
                 }
                 return true
             }
+
+            override fun onPageFinished(view: WebView, url: String) {
+                tradingIndicator.visibility = View.GONE
+            }
         }
         webView.clearCache(true)
         webView.clearHistory()
@@ -46,6 +51,7 @@ class TradingFragment: Fragment() {
         webView.setBackgroundColor(Color.TRANSPARENT)
         webView.settings.javaScriptCanOpenWindowsAutomatically = true
         webView.loadUrl(getString(R.string.trading_calculator_url))
+
     }
 
 }
