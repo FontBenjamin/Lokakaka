@@ -9,7 +9,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.lokakaka.R
-import kotlinx.android.synthetic.main.fragment_encyclopedia.*
 
 
 class EncyclopediaFragment: Fragment() {
@@ -58,37 +57,37 @@ class EncyclopediaFragment: Fragment() {
         var fragment: CategoryFragment = CategoryFragment()
 
         smugglingButton.setOnClickListener({
-            fragment.category = Categories.SMUGGLING
+            fragment.category = Category.SMUGGLING
             ft.replace(this.id, fragment, "SmugglingFragment")
             ft.commit()
         })
         cleaningButton.setOnClickListener({
-            fragment.category = Categories.CLEANING
+            fragment.category = Category.CLEANING
             ft.replace(this.id, fragment, "CleaningFragment")
             ft.commit()
         })
         hackingButton.setOnClickListener({
-            fragment.category = Categories.HACKING
+            fragment.category = Category.HACKING
             ft.replace(this.id, fragment, "HackingFragment")
             ft.commit()
         })
         mercenaryButton.setOnClickListener({
-            fragment.category = Categories.MERCENARY
+            fragment.category = Category.MERCENARY
             ft.replace(this.id, fragment, "MercenaryFragment")
             ft.commit()
         })
         datarunningButton.setOnClickListener({
-            fragment.category = Categories.DATARUNNING
+            fragment.category = Category.DATARUNNING
             ft.replace(this.id, fragment, "DatarunningFragment")
             ft.commit()
         })
         piracyButton.setOnClickListener({
-            fragment.category = Categories.PIRACY
+            fragment.category = Category.PIRACY
             ft.replace(this.id, fragment, "PiracyFragment")
             ft.commit()
         })
         racingButton.setOnClickListener({
-            fragment.category = Categories.RACING
+            fragment.category = Category.RACING
             ft.replace(this.id, fragment, "RacingFragment")
             ft.commit()
         })

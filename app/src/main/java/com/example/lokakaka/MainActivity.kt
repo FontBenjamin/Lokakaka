@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.view.Window
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
@@ -43,6 +44,9 @@ class MainActivity : AppCompatActivity() {
 
         // we change the design of the title bar
         animateActionBar()
+
+        // we animate the progressbar
+
     }
 
     fun applyFont(tv: TextView, context: Activity) {
