@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.lokakaka.R
+import com.example.lokakaka.encyclopediaFragment.smuggling.SmugglingFragment
 import com.wang.avi.AVLoadingIndicatorView
 
 
@@ -62,42 +63,29 @@ class EncyclopediaFragment: Fragment() {
         (racingButton.parent as ConstraintLayout).visibility = View.INVISIBLE
 
         val ft: FragmentTransaction = fragmentManager!!.beginTransaction()
-        var fragment: CategoryFragment = CategoryFragment()
 
         smugglingButton.setOnClickListener({
-            fragment.category = Category.SMUGGLING
-            ft.replace(this.id, fragment, "SmugglingFragment")
+            var fragmentSmuggling: SmugglingFragment = SmugglingFragment()
+            ft.replace(this.id, fragmentSmuggling, "SmugglingFragment")
             ft.commit()
         })
         cleaningButton.setOnClickListener({
-            fragment.category = Category.CLEANING
-            ft.replace(this.id, fragment, "CleaningFragment")
-            ft.commit()
+
         })
         hackingButton.setOnClickListener({
-            fragment.category = Category.HACKING
-            ft.replace(this.id, fragment, "HackingFragment")
-            ft.commit()
+
         })
         mercenaryButton.setOnClickListener({
-            fragment.category = Category.MERCENARY
-            ft.replace(this.id, fragment, "MercenaryFragment")
-            ft.commit()
+
         })
         datarunningButton.setOnClickListener({
-            fragment.category = Category.DATARUNNING
-            ft.replace(this.id, fragment, "DatarunningFragment")
-            ft.commit()
+
         })
         piracyButton.setOnClickListener({
-            fragment.category = Category.PIRACY
-            ft.replace(this.id, fragment, "PiracyFragment")
-            ft.commit()
+
         })
         racingButton.setOnClickListener({
-            fragment.category = Category.RACING
-            ft.replace(this.id, fragment, "RacingFragment")
-            ft.commit()
+
         })
 
         // we launch the animation

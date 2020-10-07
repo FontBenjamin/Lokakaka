@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewBackSmuggling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        app:tint="@color/colorAccent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutYoutube"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewContentSmuggling">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout10"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorAccent"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
+
+                    <Button
+                        android:id="@+id/buttonNT999XX"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorBackground"
+                        android:drawableLeft="@drawable/ic_action_youtube"
+                        android:drawableTint="@color/colorAccent"
+                        android:fontFamily="@font/advanced_pixel"
+                        android:padding="8dp"
+                        android:text="NT-999-XX - Yela"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout9"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorAccent"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                    <Button
+                        android:id="@+id/buttonParadise"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorBackground"
+                        android:drawableLeft="@drawable/ic_action_youtube"
+                        android:drawableTint="@color/colorAccent"
+                        android:fontFamily="@font/advanced_pixel"
+                        android:padding="8dp"
+                        android:text="Paradise Cove - Lyria"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout8"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorAccent"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+
+                    <Button
+                        android:id="@+id/buttonJumptown"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorBackground"
+                        android:drawableLeft="@drawable/ic_action_youtube"
+                        android:drawableTint="@color/colorAccent"
+                        android:fontFamily="@font/advanced_pixel"
+                        android:padding="8dp"
+                        android:text="Jumptown - Yela"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout7"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorAccent"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+                    <Button
+                        android:id="@+id/buttonNuen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorBackground"
+                        android:drawableLeft="@drawable/ic_action_youtube"
+                        android:drawableTint="@color/colorAccent"
+                        android:fontFamily="@font/advanced_pixel"
+                        android:padding="8dp"
+                        android:text="Nuen Waste Management - Daymar"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorAccent"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
+
+                    <Button
+                        android:id="@+id/buttonStashHouse"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorBackground"
+                        android:drawableLeft="@drawable/ic_action_youtube"
+                        android:drawableTint="@color/colorAccent"
+                        android:fontFamily="@font/advanced_pixel"
+                        android:padding="8dp"
+                        android:text="Stash House - Cellin"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorAccent"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/buttonOrphanage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorBackground"
+                        android:drawableLeft="@drawable/ic_action_youtube"
+                        android:drawableTint="@color/colorAccent"
+                        android:fontFamily="@font/advanced_pixel"
+                        android:padding="8dp"
+                        android:text="The Orphanage - Lyria"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutTerminalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorBackground"
+                android:padding="1dp"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayoutLabsButton"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayoutDrugsButton"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+                <Button
+                    android:id="@+id/buttonTerminal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackground"
+                    android:drawableTint="@color/colorAccent"
+                    android:fontFamily="@font/advanced_pixel"
+                    android:padding="8dp"
+                    android:text="@string/smuggling_title_terminal"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLabsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBackground"
+                android:padding="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+                <Button
+                    android:id="@+id/buttonLabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackground"
+                    android:drawableTint="@color/colorAccent"
+                    android:fontFamily="@font/advanced_pixel"
+                    android:padding="8dp"
+                    android:text="@string/smuggling_title_labos"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutDrugsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+                android:padding="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+                <Button
+                    android:id="@+id/buttonDrugs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackground"
+                    android:drawableTint="@color/colorAccent"
+                    android:fontFamily="@font/advanced_pixel"
+                    android:padding="8dp"
+                    android:text="@string/smuggling_title_marchandises"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/caterpillar" />
+
+            <TextView
+                android:id="@+id/textViewContentSmuggling"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/advanced_pixel"
+                android:lineSpacingExtra="-8dp"
+                android:text="@string/smuggling_content_marchandises"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTerminalButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
