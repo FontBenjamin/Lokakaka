@@ -46,6 +46,7 @@
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/advanced_pixel"
                 android:gravity="center_horizontal"
+                android:lineSpacingExtra="-8dp"
                 android:text="@string/welcome_text"
                 android:textAlignment="center"
                 android:textColor="@color/colorAccent"
