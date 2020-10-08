@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.lokakaka.R
+import com.example.lokakaka.encyclopediaFragment.cleaning.CleaningFragment
 import com.example.lokakaka.encyclopediaFragment.smuggling.SmugglingFragment
 import com.wang.avi.AVLoadingIndicatorView
 
@@ -70,7 +71,9 @@ class EncyclopediaFragment: Fragment() {
             ft.commit()
         })
         cleaningButton.setOnClickListener({
-
+            var fragmentCleaning: CleaningFragment = CleaningFragment()
+            ft.replace(this.id, fragmentCleaning, "SmugglingFragment")
+            ft.commit()
         })
         hackingButton.setOnClickListener({
 
