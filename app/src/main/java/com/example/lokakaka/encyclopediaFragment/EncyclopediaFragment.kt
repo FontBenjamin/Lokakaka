@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.lokakaka.R
 import com.example.lokakaka.encyclopediaFragment.cleaning.CleaningFragment
+import com.example.lokakaka.encyclopediaFragment.datarunning.DatarunningFragment
 import com.example.lokakaka.encyclopediaFragment.hacking.HackingFragment
 import com.example.lokakaka.encyclopediaFragment.mercenary.MercenaryFragment
 import com.example.lokakaka.encyclopediaFragment.smuggling.SmugglingFragment
@@ -88,7 +89,9 @@ class EncyclopediaFragment: Fragment() {
             ft.commit()
         })
         datarunningButton.setOnClickListener({
-
+            var fragmentDatarunning: DatarunningFragment = DatarunningFragment()
+            ft.replace(this.id, fragmentDatarunning, "DatarunningFragment")
+            ft.commit()
         })
         piracyButton.setOnClickListener({
 
