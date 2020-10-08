@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.lokakaka.R
 import com.example.lokakaka.encyclopediaFragment.cleaning.CleaningFragment
 import com.example.lokakaka.encyclopediaFragment.hacking.HackingFragment
+import com.example.lokakaka.encyclopediaFragment.mercenary.MercenaryFragment
 import com.example.lokakaka.encyclopediaFragment.smuggling.SmugglingFragment
 import com.wang.avi.AVLoadingIndicatorView
 
@@ -82,7 +83,9 @@ class EncyclopediaFragment: Fragment() {
             ft.commit()
         })
         mercenaryButton.setOnClickListener({
-
+            var fragmentMercenary: MercenaryFragment = MercenaryFragment()
+            ft.replace(this.id, fragmentMercenary, "MercenaryFragment")
+            ft.commit()
         })
         datarunningButton.setOnClickListener({
 
