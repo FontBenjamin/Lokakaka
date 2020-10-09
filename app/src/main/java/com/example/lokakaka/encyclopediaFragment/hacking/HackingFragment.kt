@@ -40,18 +40,18 @@ class HackingFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        backImageView = getView()?.findViewById(R.id.imageViewBackHacking)!!
-        missionButton = getView()?.findViewById(R.id.buttonMission)!!
-        microshipsButton = getView()?.findViewById(R.id.buttonMicroships)!!
-        crimestatButton = getView()?.findViewById(R.id.buttonCrimestat)!!
-        missionConstraintLayout = getView()?.findViewById(R.id.constraintLayoutMissionsButton)!!
-        microshipConstraintLayout = getView()?.findViewById(R.id.constraintLayoutMicroshipsButton)!!
-        crimestatConstraintLayout = getView()?.findViewById(R.id.constraintLayoutCrimeStatButton)!!
-        microshipContentConstraintLayout = getView()?.findViewById(R.id.constraintLayoutMicroships)!!
-        contentTextView = getView()?.findViewById(R.id.textViewContentHacking)!!
 
-        microshipContentConstraintLayout.visibility = View.GONE
+        // we retrieve the views from the layout
+        getViews()
 
+        // we set the initial appearance of the views and buttons
+        setViewInitialState()
+
+        // we set the buttons action listeners
+        setButtonsListeners()
+    }
+
+    private fun setButtonsListeners() {
         missionButton.setOnClickListener({
             contentTextView.setText(getString(R.string.hacking_content_missions))
             constraintLayoutMicroships.visibility = View.GONE
@@ -76,7 +76,6 @@ class HackingFragment: Fragment() {
             constraintLayoutCrimeStatButton.setBackgroundResource(R.color.colorAccent)
         })
 
-        backImageView.bringToFront()
         backImageView.setOnClickListener({
             val ft: FragmentTransaction = fragmentManager!!.beginTransaction()
             ft.replace(this.id, EncyclopediaFragment(), "EncyclopediaFragment")
@@ -84,8 +83,22 @@ class HackingFragment: Fragment() {
         })
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    private fun setViewInitialState() {
+        microshipContentConstraintLayout.visibility = View.GONE
+        backImageView.bringToFront()
+    }
+
+    private fun getViews() {
+        backImageView = getView()?.findViewById(R.id.imageViewBackHacking)!!
+        missionButton = getView()?.findViewById(R.id.buttonMission)!!
+        microshipsButton = getView()?.findViewById(R.id.buttonMicroships)!!
+        crimestatButton = getView()?.findViewById(R.id.buttonCrimestat)!!
+        missionConstraintLayout = getView()?.findViewById(R.id.constraintLayoutMissionsButton)!!
+        microshipConstraintLayout = getView()?.findViewById(R.id.constraintLayoutMicroshipsButton)!!
+        crimestatConstraintLayout = getView()?.findViewById(R.id.constraintLayoutCrimeStatButton)!!
+        microshipContentConstraintLayout =
+            getView()?.findViewById(R.id.constraintLayoutMicroships)!!
+        contentTextView = getView()?.findViewById(R.id.textViewContentHacking)!!
     }
 
 }

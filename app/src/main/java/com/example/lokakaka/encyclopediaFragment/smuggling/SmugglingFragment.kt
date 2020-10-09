@@ -52,6 +52,60 @@ class SmugglingFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // we retrieve the views from the layout
+        getViews()
+
+        // we set the initial appearance of the views and buttons
+        setViewInitialState()
+
+        // we set the buttons action listeners
+        setButtonsListeners()
+    }
+
+    private fun setButtonsListeners() {
+        drugsButton.setOnClickListener({
+            contentTextView.setText(getString(R.string.smuggling_content_marchandises))
+            constraintLayoutYoutube.visibility = View.GONE
+            constraintLayoutDrugs.setBackgroundResource(R.color.colorAccent)
+            constraintLayoutTerminal.setBackgroundResource(R.color.colorBackground)
+            constraintLayoutLabs.setBackgroundResource(R.color.colorBackground)
+        })
+        terminalButton.setOnClickListener({
+            contentTextView.setText(getString(R.string.smuggling_content_terminal))
+            constraintLayoutYoutube.visibility = View.GONE
+            constraintLayoutDrugs.setBackgroundResource(R.color.colorBackground)
+            constraintLayoutTerminal.setBackgroundResource(R.color.colorAccent)
+            constraintLayoutLabs.setBackgroundResource(R.color.colorBackground)
+        })
+        labsButton.setOnClickListener({
+            contentTextView.setText(getString(R.string.smuggling_content_labos))
+            constraintLayoutYoutube.visibility = View.VISIBLE
+            constraintLayoutDrugs.setBackgroundResource(R.color.colorBackground)
+            constraintLayoutTerminal.setBackgroundResource(R.color.colorBackground)
+            constraintLayoutLabs.setBackgroundResource(R.color.colorAccent)
+        })
+
+        backImageView.setOnClickListener({
+            val ft: FragmentTransaction = fragmentManager!!.beginTransaction()
+            ft.replace(this.id, EncyclopediaFragment(), "EncyclopediaFragment")
+            ft.commit()
+        })
+
+        orphanageButton.setOnClickListener({ watchYoutubeVideo("IqBKatHvR9A") })
+        paradiseButton.setOnClickListener({ watchYoutubeVideo("CLtafTBm2kU") })
+        jumptownButton.setOnClickListener({ watchYoutubeVideo("ouxB2toqah8") })
+        nt999xxButton.setOnClickListener({ watchYoutubeVideo("Jd6I5748cAk") })
+        stashButton.setOnClickListener({ watchYoutubeVideo("ttgXST0OuuE") })
+        nuenButton.setOnClickListener({ watchYoutubeVideo("G6noFJvF45c") })
+    }
+
+    private fun setViewInitialState() {
+        constraintLayoutYoutube.visibility = View.GONE
+        backImageView.bringToFront()
+    }
+
+    private fun getViews() {
         backImageView = getView()?.findViewById(R.id.imageViewBackSmuggling)!!
         drugsButton = getView()?.findViewById(R.id.buttonDrugs)!!
         terminalButton = getView()?.findViewById(R.id.buttonTerminal)!!
@@ -67,49 +121,9 @@ class SmugglingFragment: Fragment() {
         constraintLayoutDrugs = getView()?.findViewById(R.id.constraintLayoutDrugsButton)!!
         constraintLayoutTerminal = getView()?.findViewById(R.id.constraintLayoutTerminalButton)!!
         constraintLayoutLabs = getView()?.findViewById(R.id.constraintLayoutLabsButton)!!
-
-        constraintLayoutYoutube.visibility = View.GONE
-
-        drugsButton.setOnClickListener({
-            contentTextView.setText(getString(R.string.smuggling_content_marchandises))
-            constraintLayoutYoutube.visibility = View.GONE
-            constraintLayoutDrugs.setBackgroundResource(R.color.colorAccent)
-            constraintLayoutTerminal.setBackgroundResource(R.color.colorBackground)
-            constraintLayoutLabs.setBackgroundResource(R.color.colorBackground)
-        })
-
-        terminalButton.setOnClickListener({
-            contentTextView.setText(getString(R.string.smuggling_content_terminal))
-            constraintLayoutYoutube.visibility = View.GONE
-            constraintLayoutDrugs.setBackgroundResource(R.color.colorBackground)
-            constraintLayoutTerminal.setBackgroundResource(R.color.colorAccent)
-            constraintLayoutLabs.setBackgroundResource(R.color.colorBackground)
-        })
-
-        labsButton.setOnClickListener({
-            contentTextView.setText(getString(R.string.smuggling_content_labos))
-            constraintLayoutYoutube.visibility = View.VISIBLE
-            constraintLayoutDrugs.setBackgroundResource(R.color.colorBackground)
-            constraintLayoutTerminal.setBackgroundResource(R.color.colorBackground)
-            constraintLayoutLabs.setBackgroundResource(R.color.colorAccent)
-        })
-
-        backImageView.bringToFront()
-        backImageView.setOnClickListener({
-            val ft: FragmentTransaction = fragmentManager!!.beginTransaction()
-            ft.replace(this.id, EncyclopediaFragment(), "EncyclopediaFragment")
-            ft.commit()
-        })
-
-        orphanageButton.setOnClickListener({ watchYoutubeVideo("IqBKatHvR9A") })
-        paradiseButton.setOnClickListener({ watchYoutubeVideo("CLtafTBm2kU") })
-        jumptownButton.setOnClickListener({ watchYoutubeVideo("ouxB2toqah8") })
-        nt999xxButton.setOnClickListener({ watchYoutubeVideo("Jd6I5748cAk") })
-        stashButton.setOnClickListener({ watchYoutubeVideo("ttgXST0OuuE") })
-        nuenButton.setOnClickListener({ watchYoutubeVideo("G6noFJvF45c") })
     }
 
-    fun watchYoutubeVideo(id: String) {
+    private fun watchYoutubeVideo(id: String) {
         val appIntent = Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:$id"))
         val webIntent = Intent(
             Intent.ACTION_VIEW,
