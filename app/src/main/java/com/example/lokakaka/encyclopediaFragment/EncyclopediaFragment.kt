@@ -13,6 +13,7 @@ import com.example.lokakaka.encyclopediaFragment.cleaning.CleaningFragment
 import com.example.lokakaka.encyclopediaFragment.datarunning.DatarunningFragment
 import com.example.lokakaka.encyclopediaFragment.hacking.HackingFragment
 import com.example.lokakaka.encyclopediaFragment.mercenary.MercenaryFragment
+import com.example.lokakaka.encyclopediaFragment.piracy.PiracyFragment
 import com.example.lokakaka.encyclopediaFragment.smuggling.SmugglingFragment
 import com.wang.avi.AVLoadingIndicatorView
 
@@ -40,9 +41,21 @@ class EncyclopediaFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        encyclopediaIndicator = getView()?.findViewById(R.id.indicatorEncyclopedia)!!
-        encyclopediaIndicator.bringToFront()
+        // we retrieve the views from the layout
+        getViews()
 
+        // we set the initial appearance of the views and buttons
+        setViewInitialState()
+
+        // we set the buttons action listeners
+        setButtonsListeners()
+
+        // we launch the buttonss animation
+        animateButtons()
+    }
+
+    private fun getViews() {
+        encyclopediaIndicator = getView()?.findViewById(R.id.indicatorEncyclopedia)!!
         smugglingButton = getView()?.findViewById(R.id.buttonSmuggling)!!
         cleaningButton = getView()?.findViewById(R.id.buttonCleaning)!!
         hackingButton = getView()?.findViewById(R.id.buttonHacking)!!
@@ -50,7 +63,10 @@ class EncyclopediaFragment: Fragment() {
         datarunningButton = getView()?.findViewById(R.id.buttonDatarunning)!!
         piracyButton = getView()?.findViewById(R.id.buttonPiracy)!!
         racingButton = getView()?.findViewById(R.id.buttonRacing)!!
+    }
 
+    private fun setViewInitialState() {
+        encyclopediaIndicator.bringToFront()
         smugglingButton.visibility = View.INVISIBLE
         (smugglingButton.parent as ConstraintLayout).visibility = View.INVISIBLE
         cleaningButton.visibility = View.INVISIBLE
@@ -65,9 +81,10 @@ class EncyclopediaFragment: Fragment() {
         (piracyButton.parent as ConstraintLayout).visibility = View.INVISIBLE
         racingButton.visibility = View.INVISIBLE
         (racingButton.parent as ConstraintLayout).visibility = View.INVISIBLE
+    }
 
+    private fun setButtonsListeners() {
         val ft: FragmentTransaction = fragmentManager!!.beginTransaction()
-
         smugglingButton.setOnClickListener({
             var fragmentSmuggling: SmugglingFragment = SmugglingFragment()
             ft.replace(this.id, fragmentSmuggling, "SmugglingFragment")
@@ -94,14 +111,13 @@ class EncyclopediaFragment: Fragment() {
             ft.commit()
         })
         piracyButton.setOnClickListener({
-
+            var fragmentPiracy: PiracyFragment = PiracyFragment()
+            ft.replace(this.id, fragmentPiracy, "PiracyFragment")
+            ft.commit()
         })
         racingButton.setOnClickListener({
 
         })
-
-        // we launch the animation
-        animateButtons()
     }
 
     private fun animateButtons() {

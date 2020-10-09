@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        toolbar = findViewById(R.id.toolbar)
-        toolbarTitle = findViewById(R.id.titleTextView)
-        bottomNavigation = findViewById(R.id.bottomNavigationView)
+        // we retrieve the views from the layout
+        getViews()
+
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         // we open the welcome fragment at the start of the app
@@ -45,12 +45,12 @@ class MainActivity : AppCompatActivity() {
         // we change the design of the title bar
         animateActionBar()
 
-        // we animate the progressbar
-
     }
 
-    fun applyFont(tv: TextView, context: Activity) {
-        tv.typeface = Typeface.createFromAsset(context.assets, "fonts/customFont")
+    private fun getViews() {
+        toolbar = findViewById(R.id.toolbar)
+        toolbarTitle = findViewById(R.id.titleTextView)
+        bottomNavigation = findViewById(R.id.bottomNavigationView)
     }
 
     private fun animateActionBar() {

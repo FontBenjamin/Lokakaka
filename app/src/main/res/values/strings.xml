@@ -44,4 +44,6 @@
     <string name="datarunning_herald">Drake Interplanetary – The Herald\n\nLe Herald de Drake est un vaisseau petit, blindé conçu pour transporter rapidement des données de ce de manière sécurisée. Prévus pour une seule personne, il permetrat aux freelanceurs de se lancer dans cette activité. Ces impréssionnants réacteurs lui permettent de se déplacer rapidement, et une autodestructions des données pourrais être possible en cas de capture.</string>
     <string name="datarunning_mercury">Crusader Industries – Mercury Star Runner\n\nLe Mercury Star Runner est un vaisseau trés polyvalent, capable d’embarquer 96 SCU de cargo en plus de son ordinateur de bord. Il disposera également de compartiments cachés pour faire transiter des marchandises douteuses sans risque. Véritable Faucon Millenium moderne, ce vaisseau fera le bonheur des contrebandiers polyvalents.</string>
 
+    <string name="piracy_content"></string>
+
 </resources>

@@ -31,10 +31,25 @@ class TradingFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tradingIndicator = getView()?.findViewById(R.id.indicatorTrading)!!
+
+        // we retrieve the views from the layout
+        getViews()
+
         tradingIndicator.bringToFront()
+
+        // we configure the webview to call the adress needed and inject JS
+        configureWebView()
+
+    }
+
+    private fun getViews() {
+        tradingIndicator = getView()?.findViewById(R.id.indicatorTrading)!!
         webView = getView()?.findViewById(R.id.tradingWebView)!!
+    }
+
+    private fun configureWebView() {
         webView.webViewClient = object : WebViewClient() {
+
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
                 if (url != null) {
                     view?.loadUrl(url)
@@ -44,18 +59,18 @@ class TradingFragment: Fragment() {
 
             override fun onPageFinished(view: WebView, url: String) {
                 /**webView.loadUrl(
-                    """javascript:(function f() {
-                                document.getElementsByClassName("navbar-brand")[0].style.backgroundColor = "red";
-                                document.getElementsByTagName("nav")[0].style.backgroundColor = "red";
-                                 
-                                
-                                
-                                document.getElementById("submit_btn").style.backgroundColor = "red";
-                                document.getElementById("submit_btn").style.borderColor = "red";
+                """javascript:(function f() {
+                document.getElementsByClassName("navbar-brand")[0].style.backgroundColor = "red";
+                document.getElementsByTagName("nav")[0].style.backgroundColor = "red";
 
-                                document.getElementsByClassName("input-group-text")[5].style.backgroundColor = "red";
 
-                     })()"""
+
+                document.getElementById("submit_btn").style.backgroundColor = "red";
+                document.getElementById("submit_btn").style.borderColor = "red";
+
+                document.getElementsByClassName("input-group-text")[5].style.backgroundColor = "red";
+
+                })()"""
                 )*/
                 tradingIndicator.visibility = View.GONE
             }
@@ -66,7 +81,6 @@ class TradingFragment: Fragment() {
         webView.setBackgroundColor(Color.TRANSPARENT)
         webView.settings.javaScriptCanOpenWindowsAutomatically = true
         webView.loadUrl(getString(R.string.trading_calculator_url))
-
     }
 
 }

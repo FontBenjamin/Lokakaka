@@ -1,4 +1,4 @@
-package com.example.lokakaka.encyclopediaFragment.mercenary
+package com.example.lokakaka.encyclopediaFragment.piracy
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,29 +10,31 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.lokakaka.R
 import com.example.lokakaka.encyclopediaFragment.EncyclopediaFragment
 
-class MercenaryFragment: Fragment() {
+class PiracyFragment: Fragment() {
 
     lateinit var backImageView: ImageView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-        inflater.inflate(R.layout.fragment_mercenary, container, false)
+        inflater.inflate(R.layout.fragment_piracy, container, false)
 
     companion object {
-        fun newInstance(): MercenaryFragment = MercenaryFragment()
+        fun newInstance(): PiracyFragment = PiracyFragment()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        backImageView = getView()?.findViewById(R.id.imageViewBackMercenary)!!
+        backImageView = getView()?.findViewById(R.id.imageViewBackPiracy)!!
 
         backImageView.bringToFront()
-
         backImageView.setOnClickListener({
             val ft: FragmentTransaction = fragmentManager!!.beginTransaction()
             ft.replace(this.id, EncyclopediaFragment(), "EncyclopediaFragment")
             ft.commit()
         })
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
     }
 
 }

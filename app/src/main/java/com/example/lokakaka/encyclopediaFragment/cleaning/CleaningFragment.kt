@@ -24,18 +24,16 @@ class CleaningFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         backImageView = getView()?.findViewById(R.id.imageViewBackCleaning)!!
 
         backImageView.bringToFront()
+
         backImageView.setOnClickListener({
             val ft: FragmentTransaction = fragmentManager!!.beginTransaction()
             ft.replace(this.id, EncyclopediaFragment(), "EncyclopediaFragment")
             ft.commit()
         })
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
     }
 
 }
