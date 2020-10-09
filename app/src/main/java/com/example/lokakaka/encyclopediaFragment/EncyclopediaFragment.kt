@@ -14,6 +14,7 @@ import com.example.lokakaka.encyclopediaFragment.datarunning.DatarunningFragment
 import com.example.lokakaka.encyclopediaFragment.hacking.HackingFragment
 import com.example.lokakaka.encyclopediaFragment.mercenary.MercenaryFragment
 import com.example.lokakaka.encyclopediaFragment.piracy.PiracyFragment
+import com.example.lokakaka.encyclopediaFragment.racing.RacingFragment
 import com.example.lokakaka.encyclopediaFragment.smuggling.SmugglingFragment
 import com.wang.avi.AVLoadingIndicatorView
 
@@ -116,7 +117,9 @@ class EncyclopediaFragment: Fragment() {
             ft.commit()
         })
         racingButton.setOnClickListener({
-
+            var fragmentRacing: RacingFragment = RacingFragment()
+            ft.replace(this.id, fragmentRacing, "RacingFragment")
+            ft.commit()
         })
     }
 
