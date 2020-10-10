@@ -1,12 +1,17 @@
 package com.example.lokakaka
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -17,6 +22,7 @@ import com.example.lokakaka.encyclopediaFragment.EncyclopediaFragment
 import com.example.lokakaka.tradingFragment.TradingFragment
 import com.example.lokakaka.welcomeFragment.WelcomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -56,9 +62,21 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        creditConstraintLayout.setOnClickListener({
-            // open credit page
-        })
+            buttonCredits.setOnClickListener({
+                val inflater =
+                    getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+                val popupView: View = inflater.inflate(R.layout.credits_popup, null)
+                val width = ConstraintLayout.LayoutParams.MATCH_PARENT
+                val height = ConstraintLayout.LayoutParams.WRAP_CONTENT
+                val focusable = true // lets taps outside the popup also dismiss it
+                val popupWindow = PopupWindow(popupView, width, height, focusable)
+                popupWindow.showAtLocation(creditConstraintLayout, Gravity.CENTER, 0, 0)
+                popupView.setOnTouchListener { v, event ->
+                    popupWindow.dismiss()
+                    true
+                }
+            })
+
 
         // we open the welcome fragment at the start of the app
         openFragment(WelcomeFragment.newInstance())
