@@ -1,18 +1,16 @@
 package com.example.lokakaka
 
-import android.app.Activity
-import android.graphics.Typeface
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import android.view.Window
-import android.widget.ProgressBar
+import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.res.ResourcesCompat
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.lokakaka.chatFragment.ChatFragment
 import com.example.lokakaka.encyclopediaFragment.EncyclopediaFragment
@@ -27,7 +25,15 @@ class MainActivity : AppCompatActivity() {
     lateinit var bottomNavigation: BottomNavigationView
     lateinit var toolbarTitle: TextView
 
+    lateinit var menuConstraintLayout: ConstraintLayout
+
+    lateinit var creditConstraintLayout: ConstraintLayout
+
+
+
     var titleTick: Boolean = false
+
+    var menuClick: Boolean = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,8 +42,23 @@ class MainActivity : AppCompatActivity() {
 
         // we retrieve the views from the layout
         getViews()
+        creditConstraintLayout.bringToFront()
+        creditConstraintLayout.visibility = View.GONE
 
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        menuConstraintLayout.setOnClickListener({
+            if (menuClick) {
+                creditConstraintLayout.visibility = View.GONE
+                menuClick = false
+            } else {
+                creditConstraintLayout.visibility = View.VISIBLE
+                menuClick = true
+            }
+        })
+
+        creditConstraintLayout.setOnClickListener({
+            // open credit page
+        })
 
         // we open the welcome fragment at the start of the app
         openFragment(WelcomeFragment.newInstance())
@@ -51,6 +72,8 @@ class MainActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         toolbarTitle = findViewById(R.id.titleTextView)
         bottomNavigation = findViewById(R.id.bottomNavigationView)
+        menuConstraintLayout = findViewById(R.id.constraintLayoutMenu)
+        creditConstraintLayout = findViewById(R.id.constraintLayoutCreditsButton)
     }
 
     private fun animateActionBar() {
