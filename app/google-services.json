@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "117536191163",
+    "firebase_url": "https://lokakaka-org.firebaseio.com",
+    "project_id": "lokakaka-org",
+    "storage_bucket": "lokakaka-org.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117536191163:android:1e3bc63474a74d42a9ef9e",
+        "android_client_info": {
+          "package_name": "com.fontbenjamin.lokakaka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117536191163-n17bu2d7a50f57uivp7q4jbo47tlsoqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkj7p_aR6I-Mvcp0gppcbbbnY4IkKnbv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117536191163-n17bu2d7a50f57uivp7q4jbo47tlsoqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
