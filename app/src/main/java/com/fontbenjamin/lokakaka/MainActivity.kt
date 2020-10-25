@@ -13,11 +13,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import com.fontbenjamin.lokakaka.chatFragment.ChatFragment
 import com.fontbenjamin.lokakaka.encyclopediaFragment.EncyclopediaFragment
 import com.fontbenjamin.lokakaka.tradingFragment.TradingFragment
 import com.fontbenjamin.lokakaka.welcomeFragment.WelcomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -59,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        buttonCredits.setOnClickListener({
+        buttonCredits.setOnClickListener {
             val inflater =
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val popupView: View = inflater.inflate(R.layout.credits_popup, null)
@@ -73,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 popupWindow.dismiss()
                 true
             }
-        })
+        }
 
 
         // we open the welcome fragment at the start of the app
