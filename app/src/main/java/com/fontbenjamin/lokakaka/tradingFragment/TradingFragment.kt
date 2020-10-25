@@ -57,20 +57,6 @@ class TradingFragment: Fragment() {
             }
 
             override fun onPageFinished(view: WebView, url: String) {
-                /**webView.loadUrl(
-                """javascript:(function f() {
-                document.getElementsByClassName("navbar-brand")[0].style.backgroundColor = "red";
-                document.getElementsByTagName("nav")[0].style.backgroundColor = "red";
-
-
-
-                document.getElementById("submit_btn").style.backgroundColor = "red";
-                document.getElementById("submit_btn").style.borderColor = "red";
-
-                document.getElementsByClassName("input-group-text")[5].style.backgroundColor = "red";
-
-                })()"""
-                )*/
                 tradingIndicator.visibility = View.GONE
             }
         }

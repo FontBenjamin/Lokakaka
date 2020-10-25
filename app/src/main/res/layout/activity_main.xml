@@ -81,7 +81,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:srcCompat="@drawable/ic_action_iconapp" />
+        app:srcCompat="@drawable/ic_action_iconapp"
+        app:tint="@color/colorAccentDark" />
 
     <TextView
         android:id="@+id/titleTextView"
