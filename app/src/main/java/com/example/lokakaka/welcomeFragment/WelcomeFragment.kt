@@ -45,6 +45,24 @@ class WelcomeFragment: Fragment() {
             )
         })
 
+        buttonYoutube.setOnClickListener({
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://youtube.com/channel/UCgam5Cpkw_pr7bpASWPRrjg")
+                )
+            )
+        })
+
+        buttonDiscord.setOnClickListener({
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://discord.gg/N377XY")
+                )
+            )
+        })
+
         welcomeIndicator.bringToFront()
     }
 
