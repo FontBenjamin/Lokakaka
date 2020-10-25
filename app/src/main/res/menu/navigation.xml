@@ -6,6 +6,11 @@
         android:title="@string/menu_welcome"/>
 
     <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_action_contract"
+        android:title="@string/menu_chat"/>
+
+    <item
         android:id="@+id/navigation_encyclopedia"
         android:icon="@drawable/ic_action_treasurechest"
         android:title="@string/menu_encyclopedia"/>
@@ -14,9 +19,4 @@
         android:id="@+id/navigation_trading"
         android:icon="@drawable/ic_action_rocket"
         android:title="@string/menu_trading"/>
-
-    <item
-        android:id="@+id/navigation_chat"
-        android:icon="@drawable/ic_action_chatbox"
-        android:title="@string/menu_chat"/>
 </menu>
