@@ -3,7 +3,7 @@
     <string name="menu_welcome">Salutations</string>
     <string name="menu_encyclopedia">Activités</string>
     <string name="menu_trading">Routes</string>
-    <string name="menu_chat">Contrats</string>
+    <string name="menu_news">Actualités</string>
     <string name="title_full">Lokakaka!Org█</string>
     <string name="title">Lokakaka!Org</string>
 
@@ -13,6 +13,8 @@
     <string name="button_syndicate">La page du syndicat</string>
     <string name="button_youtube">La chaine Youtube</string>
     <string name="button_discord">Le Discord</string>
+
+    <string name="firebase_error">Une erreur s’est produite lors de la récupération des actualités !\nVeuillez ré-essayer plus tard.</string>
 
     <string name="trading_calculator_url">https://sc-trading.kamille.ovh/trading/</string>
 

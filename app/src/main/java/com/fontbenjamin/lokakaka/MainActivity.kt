@@ -13,13 +13,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import com.fontbenjamin.lokakaka.chatFragment.ChatFragment
+import com.fontbenjamin.lokakaka.newsFragment.NewsFragment
 import com.fontbenjamin.lokakaka.encyclopediaFragment.EncyclopediaFragment
 import com.fontbenjamin.lokakaka.tradingFragment.TradingFragment
 import com.fontbenjamin.lokakaka.welcomeFragment.WelcomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -128,8 +126,8 @@ class MainActivity : AppCompatActivity() {
                 openFragment(tradingFragment)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_chat -> {
-                val chatFragment = ChatFragment.newInstance()
+            R.id.navigation_news -> {
+                val chatFragment = NewsFragment.newInstance()
                 openFragment(chatFragment)
                 return@OnNavigationItemSelectedListener true
             }
