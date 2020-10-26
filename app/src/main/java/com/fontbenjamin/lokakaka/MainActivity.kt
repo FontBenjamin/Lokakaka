@@ -13,8 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
-import com.fontbenjamin.lokakaka.newsFragment.NewsFragment
 import com.fontbenjamin.lokakaka.encyclopediaFragment.EncyclopediaFragment
+import com.fontbenjamin.lokakaka.newsFragment.NewsFragment
 import com.fontbenjamin.lokakaka.tradingFragment.TradingFragment
 import com.fontbenjamin.lokakaka.welcomeFragment.WelcomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -75,13 +75,27 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
-        // we open the welcome fragment at the start of the app
-        openFragment(WelcomeFragment.newInstance())
-
         // we change the design of the title bar
         animateActionBar()
 
+        // we handle the connection
+        handleFirstLaunch()
+
+    }
+
+    private fun handleFirstLaunch(){
+        val PREFS_NAME = "FirstLaunch"
+        val settings = getSharedPreferences(PREFS_NAME, 0)
+        if (settings.getBoolean("my_first_time", true)) {
+            settings.edit().putBoolean("my_first_time", false).commit()
+            // we open the welcome fragment at the start of the app
+            openFragment(WelcomeFragment.newInstance())
+            bottomNavigation.setSelectedItemId(R.id.navigation_welcome)
+        } else {
+            // we open the welcome fragment at the start of the app
+            openFragment(NewsFragment.newInstance())
+            bottomNavigation.setSelectedItemId(R.id.navigation_news)
+        }
     }
 
     private fun getViews() {
@@ -101,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                     toolbarTitle.text = getString(R.string.title)
                     titleTick = false
                 } else {
-                    toolbarTitle.text  = getString(R.string.title_full)
+                    toolbarTitle.text = getString(R.string.title_full)
                     titleTick = true
                 }
                 mainHandler.postDelayed(this, 750)
