@@ -58,7 +58,7 @@ class WelcomeFragment: Fragment() {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://discord.gg/N377XY")
+                    Uri.parse("https://discord.gg/cqSsfMx")
                 )
             )
         })
